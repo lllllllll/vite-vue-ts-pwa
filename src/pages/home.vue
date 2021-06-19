@@ -2,8 +2,8 @@
   <div class="home">
     <h1>HOME</h1>
     
-    <li v-for="(i, index) in getUsers" :key="index">
-      {{index + 1}} : {{i.name}}
+    <li v-for="{name, id} in getUsers" :key="id">
+      {{name}}
     </li>
     
     <button class="mt-5" @click.prevent="fetchUsers()">Fetch Users</button>
